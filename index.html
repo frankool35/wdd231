@@ -31,7 +31,7 @@
     
      <!-- Navigation links -->
     <ul  id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="show">Home</a></li>
         <li><a href="#">Chamber Project</a></li>
         <li><a href="#">Final Project</a></li>
       </ul>
@@ -84,6 +84,16 @@
     <p>© <span id="currentyear"></span> 🌸Etim Frank🌸 | Lagos,Nigeria</p>
     <p id="lastModified"></p>
   </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+   menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+
+  });
+</script>
 
   
 </body>
