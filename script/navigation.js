@@ -1,26 +1,16 @@
-// ==============================
-// navigation.js — Responsive Menu
-// ==============================
+// Hamburger menu 
+const menuButton = document.getElementById("menu-toggle");
+const navigation = document.getElementById("nav-links");
 
-const menuButton = document.querySelector('#menu');
-const navigation = document.querySelector('nav ul');
-
-// Toggle the navigation visibility when hamburger is clicked
-menuButton.addEventListener('click', () => {
-  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', !expanded);
-  navigation.classList.toggle('open');
-  menuButton.classList.toggle('open');
+menuToggle.addEventListener("click", () => {
+  navlink.classList.toggle("show");
+  menuToggle.textContent = navlink.classList.contain("show") ? "☰" : "✖";
 });
 
-// Close the menu when a link is clicked (for smoother UX)
-const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    if (navigation.classList.contains('open')) {
-      navigation.classList.remove('open');
-      menuButton.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
+function openNav() {
+  document.getElementById("mySideNav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySideNav").style.width = "0";
+}

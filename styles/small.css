@@ -39,17 +39,14 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* Hamburger Button */
-#menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+/* Hamburger button */
+#menu-toggle {
+  display: none;  /* hidden on desktop */
+  font-size: 24px;
   background: none;
-  color: white;
   border: none;
-  font-size: 1.5rem;
+  color: white;
   cursor: pointer;
-  display: block;
 }
 
 /* Navigation */
