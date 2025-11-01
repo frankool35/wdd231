@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Course Home Page for Etim Frank" />
+  <title>Etim Frank | WDD 231 - Home Page</title>
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <script src="script/navigation.js" defer></script>
+  <script src="script/date.js" defer></script>
+  <script src="script/course.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      
+    <button id="menu" aria-label="Toggle Navigation">☰</button>
+    <nav id="navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is Etim Frank, a web development student with a strong passion for creating clean, responsive, and accessible websites. I hold a degree in Physics and have a deep appreciation for how technology can drive innovation and solve real-world problems. I am dedicated to continuous learning, exploring new technologies, and applying them to meaningful, creative projects. Beyond coding, I enjoy adventures that inspire fresh perspectives and creativity in my work.
+      </p>
+    </section>
+    <section class="photo">
+      <h2>Student Photo</h2>
+      <img src="images/profile.jpg" alt="Photo of Etim Frank">
+    </section>
+  </div>
+
+    <section class="courses">
+  <h2>Certificate Courses</h2>
+
+  <div class="filter-buttons">
+    <button id="All" class="active">All Courses</button>
+    <button id="WDD">WDD Courses</button>
+    <button id="CSE">CSE Courses</button>
+  </div>
+
+  <div id="course-list"></div>
+
+  <p><strong>Total Credits:</strong> <span id="total-credits">0</span></p>
+</section>
+</main>
+</body>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/etim-frank-452193102" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn icon">
+      </a>
+      <a href="fithub.com/frankool35" target="_blank" aria-label="GitHub">
+        <img src="images/github.svg" alt="GitHub icon">
+      </a>
+      <a href="https://www.facebook.com/etim_frank" target="_blank" aria-label="facebook Logo">
+        <img src="images/facebook.svg" alt="facebooklogo">
+      </a>
+    </div>
+
+    <p>© <span id="currentyear"></span> 🌸Etim Frank🌸 | Lagos,Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  
+</body>
+</html>
