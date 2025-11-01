@@ -49,11 +49,6 @@ header h1 {
   cursor: pointer;
 }
 
-/* Navigation */
-nav {
-  display: block;
-  background-color: #444;
-}
 
 nav ul {
   list-style: none;
@@ -215,5 +210,35 @@ footer .social img:hover {
   transform: scale(1.03);
 }
 
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  /* hides on small screens */
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #2a4d69;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+/* show only when toggled by JS */
+  #nav-links.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width:840px) {
+  body {
+    background-color: lightblue;
+  }
+}
 
 
