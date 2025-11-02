@@ -136,7 +136,7 @@ section h2 {
 
 #course-list {
   display: flex;
-  flex-direction: horizontal;
+  flex-direction: row;
   gap: 0.3rem;
   text-align: center;
 }
