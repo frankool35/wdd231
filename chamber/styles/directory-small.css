@@ -1,8 +1,13 @@
 /* directory.css | Chamber Directory Styles */
 
 /* ---------- General Styles ---------- */
+
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
-  --primary-color: #004d7a;
+ --primary-color: #003a5c;
   --secondary-color: #ffcc00;
   --background-color: #f4f4f4;
   --text-color: #333;
@@ -86,7 +91,7 @@ nav a.active {
 /* LIST VIEW */
 .list-view {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
@@ -94,9 +99,13 @@ nav a.active {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  text-align: left;
   flex-wrap: wrap; /* ensures it wraps nicely */
   padding: 1rem;
+  gap: 1rem;
 }
+
+
 
 .member-card {
   background-color: white;
@@ -133,13 +142,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* List view layout */
-.list-view .member-card {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 1rem;
-}
 
 .list-view .member-card img {
   width: 80px;
@@ -167,4 +169,13 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.member-card {
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
