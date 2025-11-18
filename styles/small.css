@@ -1,0 +1,244 @@
+/* ==============================
+   Small Screen (Mobile-First)
+   ============================== */
+
+:root {
+  --primary-color: #222;
+  --accent-color: #f4f4f4;
+  --text-color: #333;
+  --header-bg: #000;
+  --button-bg: #fff;
+  --button-border: #333;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Hamburger button */
+#menu-toggle {
+  display: none;  /* hidden on desktop */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+nav ul {
+  list-style: none;
+   display:flex;
+   justify-content: flex-start;  
+}
+
+nav ul li {
+  border-top: 1px solid #666;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #666;
+}
+
+/* Show navigation when active */
+nav.active {
+  display: block;
+}
+
+/* ===== Main Layout ===== */
+main {
+  display:grid;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Section styles */
+section {
+  background: white;
+  padding:0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* About Me */
+.photo img {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Courses Section */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-buttons button {
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-buttons button:hover {
+  background-color: #ddd;
+}
+
+#course-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+#course-list div {
+  background-color: #eee;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #faf0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .social img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+footer .social img:hover {
+  filter: grayscale(0%);
+}
+
+.container {
+  display: flex;
+}
+
+.left{
+  width: 50%;
+  float: left;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right{
+  width: 50%;
+  float: right;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.course-card {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.course-card.completed {
+  background-color: #c21c32; /* red for completed */
+  border: 2px solid #82f187;
+}
+
+.course-card:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  /* hides on small screens */
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #2a4d69;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+/* show only when toggled by JS */
+  #nav-links.show {
+    display: block;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width:840px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+

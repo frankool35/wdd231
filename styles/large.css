@@ -1,0 +1,46 @@
+/* Larger screens */
+.navigation {
+  display: flex !important;
+  flex-direction: row;
+  gap: 1rem;
+  background: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Courses Section */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-buttons button {
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-buttons button:hover {
+  background-color: #ddd;
+}
+
+#course-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+#course-list div {
+  background-color: #eee;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
