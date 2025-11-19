@@ -1,0 +1,56 @@
+/* ========== THANK YOU PAGE – LARGE SCREENS ========== */
+
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  line-height: 1.6;
+}
+
+.thank-icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004c99;
+}
+
+/* OPTIONAL RESPONSIVE */
+@media (max-width: 600px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}

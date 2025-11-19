@@ -1,0 +1,98 @@
+/* ========== JOIN PAGE — LARGE SCREENS ========== */
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* FORM LAYOUT */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* LABEL + INPUT STYLE */
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* RADIO MEMBERSHIP SECTION */
+.membership-options {
+  grid-column: 1 / 3;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.membership-options h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.membership-level {
+  display: flex;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.membership-level input {
+  margin-right: 0.6rem;
+}
+
+/* SUBMIT BUTTON */
+button {
+  grid-column: 1 / 3;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004c99;
+}
+
+/* ========== RESPONSIVE (OPTIONAL) ========== */
+@media (max-width: 700px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    grid-column: 1 / 2;
+  }
+
+  .membership-options {
+    grid-column: 1 / 2;
+  }
+}

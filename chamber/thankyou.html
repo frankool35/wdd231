@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is the Lagos Chamber of Commerce directory for exploring, naviagting and joining.">
+  <meta name="author" content="Etim Frank">
+  <title>Lagos Chamber of Commerce Directory</title>
+
+  <!-- Favicon (located in images folder) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- CSS Files (inside css folder) -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/thankyou.css">
+  <link rel="stylesheet" href="styles/thankyou-large.css">
+  <link rel="stylesheet" href="styles/directory-large.css">
+  <script src="scripts/home.js" defer ></script>
+  <script src="scripts/join.js" defer ></script>
+  <script src="scripts/thankyou.js" defer ></script>
+
+
+  <!-- Facebook Meta (social sharing) -->
+  <meta property="og:title" content="Lagos Chamber Directory">
+  <meta property="og:description" content="Explore businesses in our chamber community through social media and contact addresses.">
+  <meta property="og:image" content="https://frankool35.github.io/wdd231/chamber/images/restaurant.jpeg">
+  <meta property="og:url" content="https://frankool35.github.io/wdd231/chamber/directory.html">
+
+  <!-- Google Fonts preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <h1>Lagos Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-page">
+        <h2>Thank You for Applying!</h2>
+        <p>We have received your membership application. Here are the details you submitted:</p>
+
+        <section class="submitted-info">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="phone"></span></p>
+            <p><strong>Business Name:</strong> <span id="organization"></span></p>
+            <p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
+        </section>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+    </main>
+
+    <footer>
+         <div class="social">
+      <a href="https://www.linkedin.com/in/etim-frank-452193102" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn icon">
+      </a>
+      <a href="whatsapp.com/etim_frank" target="_blank" aria-label="whatsapp">
+        <img src="images/whatsapp.svg" alt="whatsapp icon">
+      </a>
+      <a href="https://www.facebook.com/etim_frank" target="_blank" aria-label="facebook Logo">
+        <img src="images/facebook.svg" alt="facebook icon">
+      </a>
+    </div>
+
+    <p>© <span id="currentyear"></span> 🌸Etim Frank🌸 | Lagos,Nigeria</p>
+    <p id="lastModified"></p>
+
+    </footer>
+
+    <script src="scripts/thankyou.js"></script>
+</body>
+</html>
