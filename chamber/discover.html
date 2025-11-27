@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is the Lagos Chamber of Commerce directory for exploring, navigating and joining.">
+  <meta name="author" content="Etim Frank">
+  <title>Lagos Chamber of Commerce Directory</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <!-- Only Discover CSS (remove directory css) -->
+  <link rel="stylesheet" href="styles/discover-small.css">
+  <link rel="stylesheet" href="styles/discover-large.css">
+
+  <!-- JS Files -->
+  <script src="scripts/home.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
+
+  <!-- Facebook Meta -->
+  <meta property="og:title" content="Lagos Chamber Directory">
+  <meta property="og:description" content="Explore businesses in our chamber community through social media and contact addresses.">
+  <meta property="og:image" content="https://frankool35.github.io/wdd231/chamber/images/restaurant.jpeg">
+  <meta property="og:url" content="https://frankool35.github.io/wdd231/chamber/directory.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="favicon">
+      <img src="images/favicon.ico" alt="Chamber of Commerce Logo">
+      <h1>Lagos Chamber Of Commerce</h1>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+
+    <button id="menu" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <main>
+
+    <section id="visit-message" class="visit-box"></section>
+
+    <section class="discover-grid" id="discover-grid">
+      <!-- Cards inserted by JS -->
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/etim-frank-452193102" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="whatsapp.com/etim_frank" target="_blank">
+        <img src="images/whatsapp.svg" alt="Whatsapp">
+      </a>
+      <a href="https://www.facebook.com/etim_frank" target="_blank">
+        <img src="images/facebook.svg" alt="Facebook">
+      </a>
+    </div>
+
+    <p>© <span id="currentyear"></span> 🌸Etim Frank🌸 | Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
+
