@@ -1,0 +1,373 @@
+/* main.css - Global styles for Lagos Tourism Guide */
+
+/* home.css | Chamber Home Page Styles */
+
+/* ---------- General Styles ---------- */
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #003a5c;
+  --secondary-color: #ffcc00;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+header .favicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+header .favicon img {
+  width: 45px;
+  height: 45px;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+#menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  background: url("../images/eko_hotel_and\ _suites.webp") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1,
+.hero p,
+.hero .cta-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ffd633;
+}
+
+/* ---------- Events Section ---------- */
+.events {
+  background-color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.events h2 {
+  color: var(--primary-color);
+}
+
+.event-card {
+  margin: 1rem auto;
+  max-width: 600px;
+  background-color: var(--background-color);
+  border-left: 5px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer .social {
+  margin-bottom: 0.5rem;
+}
+
+footer .social a img {
+  width: 25px;
+  margin: 0 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  #menuBtn {
+    display: block;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  
+.cta-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ffd633;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== attractions grid (mobile-first) ===== */
+.attractions-list .grid,
+#attractionsContainer.grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* one column on small screens */
+  gap: 1.25rem;
+  padding: 1rem;
+  align-items: start;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 0.9rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Image inside card */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Card content */
+.attraction-card h3 {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+}
+
+.attraction-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* small visual tweak for clickability */
+.attraction-card:hover {
+  transform: translateY(-4px);
+  transition: transform 180ms ease;
+}
+
+
+}
+
+/* ===== Attractions Grid — Mobile First ===== */
+.attractions-list .grid,
+#attractionsContainer.grid {
+  display: grid;
+  grid-template-columns: 1fr;    /* Mobile: 1 column */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Card styling */
+.card {
+  background: navajowhite;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* HOME PAGE – Top Attractions Preview Grid (Mobile) */
+.highlights .grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column mobile */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.highlights .attraction-card {
+  background: navajowhite;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.highlights .attraction-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTACT PAGE BASE STYLES */
+.contact-info {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.company-details {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.map iframe {
+  width: 70%;
+  border-radius: 10px;
+  height: 250px;
+}
+
+/* TEAM GRID (mobile = single column) */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.team-card {
+  background: navajowhite;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  padding: 1rem;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 1rem;
+}
+
+.submit-btn {
+  background: #0077cc;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #005fa3;
+}

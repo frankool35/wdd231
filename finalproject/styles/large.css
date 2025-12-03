@@ -1,0 +1,95 @@
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block; /* Show menu button on small screens */
+  }
+
+  nav ul {
+    display: none; /* Hide the full menu by default */
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav ul.show {
+    display: flex; /* Show menu when toggled */
+  }
+}
+
+/* Hide the menu toggle button on large screens */
+@media (min-width: 769px) {
+  #menuBtn {
+    display: none;
+  }
+
+  nav ul {
+    display: flex; /* Always show full nav on desktop */
+    position: static;
+    flex-direction: row;
+  }
+
+  /* Tablet */
+@media (min-width: 600px) {
+  .attractions-list .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .attractions-list .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+}
+
+/* Medium screens: 2-column grid */
+@media (min-width: 600px) {
+  #attractionsContainer.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3-column grid */
+@media (min-width: 900px) {
+  #attractionsContainer.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* HOME PAGE – Grid on Desktop */
+@media (min-width: 769px) {
+  .highlights .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* CONTACT PAGE LAYOUT - WIDER SCREENS */
+
+.contact-info {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+/* TEAM GRID = 3 COLUMNS ON DESKTOP */
+.team-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 1rem;
+  
+}
+
+.team-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  
+}

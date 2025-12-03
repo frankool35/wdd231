@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover top attractions, culture, and experiences in Lagos, Nigeria.">
+  <meta name="author" content="Etim Frank">
+  <title>Lagos Tourism Guide| Home</title>
+
+  <!-- Favicon (located in images folder) -->
+  <link rel="icon" type="image/svg" sizes="32x32" href="images/favicon-32x32.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-16×16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- CSS Files (inside css folder) -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/index.js" defer></script>
+   <script type="module" src="scripts/explore.js" defer></script>
+
+
+ 
+  <!-- Facebook Meta (social sharing) -->
+  <meta property="og:title" content="Lagos Tourism Guide">
+  <meta property="og:description" content="Your guide to exploring the best of Lagos.">
+  <meta property="og:image" content="https://frankool35.github.io/wdd231/finalproject/images/restaurant.jpeg">
+  <meta property="og:url" content="https://frankool35.github.io/wdd231/finalproject/index.html">
+
+  <!-- Google Fonts preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <header>
+    <div class="favicon">
+      <img src="images/favicon.svg" alt="Lagos Tourism Guide" />
+      <h1>Lagos Tourism Guide</h1>
+    </div>
+  </header>
+
+  <main class="confirmation-section">
+    <h1>Thank You!</h1>
+    <p>Your message has been received. Below is the information you submitted:</p>
+
+    <div id="submitted-data">Loading...</div>
+
+    <a href="contact.html" class="return-link">Return to Contact Page</a>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const container = document.querySelector("#submitted-data");
+
+    let html = "<ul>";
+    params.forEach((value, key) => {
+      html += `<li><strong>${key}:</strong> ${value}</li>`;
+    });
+    html += "</ul>";
+
+    container.innerHTML = html;
+  </script>
+</body>
+</html>
