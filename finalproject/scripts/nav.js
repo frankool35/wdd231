@@ -27,3 +27,12 @@ export function initMenu() {
     });
   });
 }
+
+// ====== Hamburger Menu ======
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+  menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+});
