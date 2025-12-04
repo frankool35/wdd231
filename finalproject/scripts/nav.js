@@ -9,10 +9,10 @@ export function initMenu() {
 
   // Toggle menu open/close
   menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("hidden");
+    navLinks.classList.toggle("show");
 
     // Accessibility label update
-    if (navLinks.classList.contains("hidden")) {
+    if (navLinks.classList.contains("show")) {
       menuBtn.setAttribute("aria-label", "Open Menu");
     } else {
       menuBtn.setAttribute("aria-label", "Close Menu");
@@ -27,12 +27,3 @@ export function initMenu() {
     });
   });
 }
-
-// ====== Hamburger Menu ======
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.querySelector("navLinks");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-  menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-});
