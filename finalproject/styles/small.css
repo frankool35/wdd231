@@ -201,8 +201,8 @@ footer .social a img {
   background-color: #ffd633;
 }
 
-.show {
-  display: block;
+.hidden {
+  display: none;
 }
 
 /* ===== attractions grid (mobile-first) ===== */
