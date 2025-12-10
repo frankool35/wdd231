@@ -27,3 +27,23 @@ export function initMenu() {
     });
   });
 }
+
+// Save current page when a nav link is clicked
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    localStorage.setItem("activePage", link.getAttribute("href"));
+  });
+});
+
+// Restore active page from localStorage
+const activePage = localStorage.getItem("activePage");
+
+if (activePage) {
+  document.querySelectorAll("nav a").forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === activePage) {
+      link.classList.add("active");
+    }
+  });
+}
+

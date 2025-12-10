@@ -93,3 +93,25 @@
   object-fit: cover;
   
 }
+
+/* === Accessibility: Color Contrast Fix === */
+.attraction-card,
+.team-card,
+.card {
+  background-color: #ffffff; /* ensures WCAG contrast */
+}
+
+.attraction-card p,
+.card p,
+.team-card p {
+  color: #1f2933; /* darker text for contrast */
+}
+
+.hero p {
+  color: #ffffff;
+}
+
+.hero::after {
+  background: rgba(0, 0, 0, 0.55); /* stronger overlay for readability */
+}
+
